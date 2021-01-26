@@ -8,9 +8,9 @@ RUN yum -y install epel-release
 #安装python3.8
 RUN yum -y install python38
 #用pip3安装numpy scipy matplotlib sympy pandas jupyter
-RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ numpy scipy matplotlib sympy pandas jupyter
+RUN pip3 install  numpy scipy matplotlib sympy pandas jupyter
 #安装TensorFlow
-RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ tensorflow
+RUN pip3 install  tensorflow
 #安装Pytorch
-RUN pip3 install --no-cache-dir -i https://mirrors.aliyun.com/pypi/simple/ torch 
-RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple/ torchvision
+RUN pip3 install  torch 
+RUN pip3 install  torchvision
