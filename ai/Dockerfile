@@ -2,7 +2,7 @@
 FROM centos
 #拷贝.jupter目录到/root/.jupyter目录
 RUN mkdir -p /root/.jupyter
-COPY /ai/.jupyter /root/.jupyter
+COPY ai/.jupyter /root/.jupyter
 #安装epel（好像这一步不是必须的）
 RUN yum -y install epel-release
 #安装python3.8
