@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dfa92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dfa92.dir/build.make CMakeFiles/cmTC_dfa92.dir/build
+make[1]: Entering directory '/home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dfa92.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_dfa92.dir/CheckSymbolExists.c.o   -c /home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dfa92
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfa92.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dfa92.dir/CheckSymbolExists.c.o  -o cmTC_dfa92 -rdynamic 
+CMakeFiles/cmTC_dfa92.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_dfa92.dir/build.make:97: recipe for target 'cmTC_dfa92' failed
+make[1]: *** [cmTC_dfa92] Error 1
+make[1]: Leaving directory '/home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_dfa92/fast' failed
+make: *** [cmTC_dfa92/fast] Error 2
+
+File /home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_77f08/fast"
+/usr/bin/make -f CMakeFiles/cmTC_77f08.dir/build.make CMakeFiles/cmTC_77f08.dir/build
+make[1]: Entering directory '/home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_77f08.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_77f08.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_77f08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77f08.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_77f08.dir/CheckFunctionExists.c.o  -o cmTC_77f08 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_77f08.dir/build.make:97: recipe for target 'cmTC_77f08' failed
+make[1]: *** [cmTC_77f08] Error 1
+make[1]: Leaving directory '/home/ubuntu/Project/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_77f08/fast' failed
+make: *** [cmTC_77f08/fast] Error 2
+
+
