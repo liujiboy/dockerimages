@@ -19,3 +19,5 @@ RUN apt-get -y update
 RUN apt-get install -y gcc
 RUN apt-get install -y g++
 RUN apt-get install -y cmake
+RUN apt-get install -y git
+RUN apt-get install -y libgtest-dev
